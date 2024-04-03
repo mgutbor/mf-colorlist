@@ -2,7 +2,7 @@ import React from "react";
 
 import Swal from "sweetalert2";
 
-const ColorList = ({ colorsList = [] }) => {
+const ColorList = ({ colorsList = [] , handleClickClearColors }) => {
 
   const handleCopyColor = (color) => {
 
@@ -20,6 +20,7 @@ const ColorList = ({ colorsList = [] }) => {
 
   return (
     <>
+      {colorsList.length > 0 && <button className="btn btn-danger my-4 w-100" onClick={handleClickClearColors}></button>}
       <h6 className="text-center">Listado de colores guardados</h6>
       <div className="list-group text-center">
         {colorsList.length > 0 ? colorsList.map((color, index) => (
