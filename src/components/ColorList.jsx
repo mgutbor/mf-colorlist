@@ -20,7 +20,7 @@ const ColorList = ({ colorsList = [] , handleClickClearColors }) => {
 
   return (
     <>
-      {colorsList.length > 0 && <button className="btn btn-danger my-4 w-100" onClick={handleClickClearColors}></button>}
+      {colorsList.length > 0 && <button className="btn btn-danger my-4 w-100" onClick={handleClickClearColors}>Clear list</button>}
       <h6 className="text-center">Listado de colores guardados</h6>
       <div className="list-group text-center">
         {colorsList.length > 0 ? colorsList.map((color, index) => (
